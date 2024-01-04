@@ -1,4 +1,4 @@
-import ProductReview from "../../components/shared/ProductReview";
+import ProductReview from "../components/shared/ProductReview";
 
 function Home() {
   return (

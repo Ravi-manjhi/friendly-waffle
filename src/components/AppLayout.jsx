@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/header/header";
-import Sidebar from "../components/sidebar/Sidebar";
+import Sidebar from "./sidebar/Sidebar";
+import Header from "./header/Header";
 
-function RootLayout() {
+function AppLayout() {
   return (
     <main className="main">
       <Header />
@@ -14,4 +14,4 @@ function RootLayout() {
   );
 }
 
-export default RootLayout;
+export default AppLayout;
