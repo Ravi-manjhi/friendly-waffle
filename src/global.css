@@ -333,7 +333,7 @@ main {
 
 /* some responsiveness */
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 768px) {
   main {
     display: grid;
     grid-template-columns: 28rem 1fr;
@@ -342,12 +342,10 @@ main {
       "header header header"
       "main-section main-section  main-section";
   }
-}
-
-@media screen and (max-width: 768px) {
   .sidebar {
     display: none;
   }
+
   .logo {
     display: none;
   }
