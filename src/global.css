@@ -65,7 +65,7 @@ main {
   gap: 1rem;
 }
 
-.header-top img {
+.logo {
   width: 150px;
   height: 50px;
 }
@@ -76,7 +76,7 @@ main {
   align-items: center;
   justify-content: space-between;
   width: 68%;
-  padding: 0 10px;
+  padding: 2px 20px;
 }
 
 .header-search input {
@@ -84,7 +84,8 @@ main {
   background-color: inherit;
   width: 95%;
   height: 95%;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 .header-search input:focus {
   outline: none;
@@ -97,8 +98,8 @@ main {
   width: fit-content;
 }
 
-.header-profile img {
-  width: 30px;
+.header-user_img {
+  width: 30px !important;
 }
 
 .header-profile p {
@@ -121,20 +122,24 @@ main {
 /* ================ header bottom nav*/
 
 .header-bottom {
-  padding: 0 40px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.header-bottom .list {
+.header-links {
   width: 100%;
   display: flex;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 5px 0 0;
 }
 
 .header-bottom a {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: black;
 }
@@ -215,9 +220,14 @@ main {
 }
 
 .main-section {
+  width: 100%;
+  overflow: scroll;
   grid-area: main-section;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart-container {
@@ -251,6 +261,7 @@ main {
 }
 
 .product-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -286,7 +297,7 @@ main {
   color: grey;
 }
 .review-time {
-  width: 5rem;
+  width: fit-content;
   font-weight: 600;
 }
 
@@ -318,4 +329,59 @@ main {
 .user-img {
   width: 65px;
   border-radius: 5px;
+}
+
+/* some responsiveness */
+
+@media screen and (max-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: 28rem 1fr;
+    gap: 1rem;
+    grid-template-areas:
+      "header header header"
+      "main-section main-section  main-section";
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .product-info {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .review-details {
+    width: 60%;
+    padding: 0 16px;
+    align-items: self-start;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .review-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .header-top {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+  }
+
+  .header-search {
+    width: 100%;
+  }
 }

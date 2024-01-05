@@ -11,7 +11,7 @@ function Header() {
     <header className="header">
       <div className="header-top">
         <Link to="/">
-          <img src="/icons/logo.png" alt="logo" />
+          <img src="/icons/logo.png" alt="logo" className="logo" />
         </Link>
         <div className="header-search">
           <input
@@ -22,7 +22,11 @@ function Header() {
           <HiOutlineMagnifyingGlass size={20} />
         </div>
         <div className="header-profile">
-          <img src="/icons/profile-placeholder.svg" alt="icon" />
+          <img
+            src="/icons/profile-placeholder.svg"
+            alt="icon"
+            className="header-user_img"
+          />
           <p>Ravi Manjhi</p>
           <Link to="/">
             <HiOutlineChevronDown />
@@ -37,7 +41,7 @@ function Header() {
       </div>
 
       <div className="header-bottom">
-        <ul className="list">
+        <ul className="header-links">
           <LinkItem path="/" title="Mobile & Table" />
           <LinkItem path="/" title="Electronic & Electronics" />
           <LinkItem path="/" title="Grocery" />
