@@ -226,7 +226,6 @@ main {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -333,7 +332,7 @@ main {
 
 /* some responsiveness */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   main {
     display: grid;
     grid-template-columns: 28rem 1fr;
@@ -345,7 +344,9 @@ main {
   .sidebar {
     display: none;
   }
+}
 
+@media screen and (max-width: 768px) {
   .logo {
     display: none;
   }
